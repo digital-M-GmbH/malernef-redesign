@@ -81,6 +81,7 @@ img { max-width: 100%; height: auto; }
   width: auto;
   display: block;
   object-fit: contain;
+  transition: filter 0.3s;
 }
 .footer-logo-img {
   height: 36px;
