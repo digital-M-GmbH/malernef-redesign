@@ -76,12 +76,15 @@ img { max-width: 100%; height: auto; }
   height: 72px;
 }
 .logo { display: flex; align-items: center; gap: var(--space-sm); }
-.logo-badge {
-  display: inline-flex; align-items: center; justify-content: center;
-  background: var(--color-primary); border: 2px solid var(--color-dark);
-  border-radius: var(--radius); padding: 6px 14px;
-  font-family: var(--font-heading); font-size: var(--font-size-xl);
-  font-weight: 700; color: var(--color-dark); letter-spacing: 2px;
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+.footer-logo-img {
+  height: 36px;
+  filter: brightness(0) invert(1);
 }
 .main-nav ul { display: flex; gap: var(--space-xl); list-style: none; }
 .main-nav a {
@@ -100,9 +103,11 @@ img { max-width: 100%; height: auto; }
 .main-nav a:hover::after, .main-nav a.active::after { width: 100%; }
 
 /* Logo color states */
-.site-header:not(.scrolled) .logo-badge {
-  background: var(--color-primary); border-color: var(--color-primary);
-  color: var(--color-dark);
+.site-header:not(.scrolled) .logo-img {
+  filter: brightness(0) invert(1);
+}
+.site-header.scrolled .logo-img {
+  filter: none;
 }
 
 /* Buttons */
